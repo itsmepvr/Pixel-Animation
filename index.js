@@ -9,6 +9,8 @@ canvas.height = 400;
 ctx.fillStyle = '#000';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+NUMBER_OF_PIECES = 30;
+
 class Cell {
     constructor(effect, x, y, index) {
         this.effect = effect;
@@ -75,8 +77,8 @@ class Effect {
         this.canvas = canvas;
         this.width = this.canvas.width;
         this.height = this.canvas.height;
-        this.cellWidth = this.canvas.width / 30;
-        this.cellHeight = this.canvas.height / 30;
+        this.cellWidth = this.canvas.width / NUMBER_OF_PIECES;
+        this.cellHeight = this.canvas.height / NUMBER_OF_PIECES;
         this.cell = new Cell(this, 0, 0);
         this.imageGrid = [];
         this.createGrid();
